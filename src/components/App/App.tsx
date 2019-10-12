@@ -1,12 +1,15 @@
 import React from 'react';
 import { Navbar } from '../Navbar';
 import { Home } from '../../Pages/Home';
+import { Container } from '@material-ui/core';
 
 const App: React.FC = () => {
   return (
     <>
       <Navbar />
-      <Home />
+      <Container fixed>
+        <Home />
+      </Container>
     </>
   );
 };

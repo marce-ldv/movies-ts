@@ -12,7 +12,9 @@ export const Home: FunctionComponent = () => {
         </Grid>
 
         <Grid item xs={8}>
-          <Movie />
+          {Array.from<number, number>({ length: 15 }, (v: any, i: any) => i).map(i => (
+            <Movie key={i} />
+          ))}
         </Grid>
       </Grid>
     </Container>

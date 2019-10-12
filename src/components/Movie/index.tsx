@@ -4,7 +4,7 @@ import { Rating } from '@material-ui/lab';
 
 export const Movie: React.FunctionComponent = () => {
   return (
-    <Card>
+    <Card style={{ marginBottom: '1em' }}>
       <CardActionArea>
         <Grid container>
           <Grid item xs={5}>
