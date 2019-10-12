@@ -1,17 +1,20 @@
 import React from 'react';
-import { AppBar, Typography, Container } from '@material-ui/core';
-import Grid from '@material-ui/core/Grid';
+import { AppBar, Typography, Container, Grid } from '@material-ui/core';
 
 export const Navbar: React.FunctionComponent = () => {
   return (
     <AppBar position="static">
       <Container fixed>
-        <Grid container justify="center" component="div">
+        <Grid container component="div">
           <Grid item xs={6} component="div">
-            <Typography variant="h6">Movies TS</Typography>
+            <Typography variant="h6" style={{ textAlign: 'center' }}>
+              Movies TS
+            </Typography>
           </Grid>
           <Grid item xs={6} component="div">
-            <Typography variant="h6">Categories</Typography>
+            <Typography variant="h6" style={{ textAlign: 'center' }}>
+              Categories
+            </Typography>
           </Grid>
         </Grid>
       </Container>
