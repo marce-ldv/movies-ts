@@ -2,28 +2,43 @@ import React from 'react';
 import { Card, CardActionArea, Grid, CardMedia, CardContent, Typography, Box } from '@material-ui/core';
 import { Rating } from '@material-ui/lab';
 
-export const Movie: React.FunctionComponent = () => {
+interface Props {
+  popularity: number;
+  originalTitle: string;
+  posterPath: string;
+  overview: string;
+  releaseDate: string;
+  voteAverage: number;
+}
+
+export const Movie: React.FunctionComponent<Props> = ({
+  popularity,
+  originalTitle,
+  posterPath,
+  overview,
+  releaseDate,
+  voteAverage,
+}) => {
   return (
     <Card style={{ marginBottom: '1em' }}>
       <CardActionArea>
         <Grid container>
           <Grid item xs={5}>
             <CardMedia
-              image="https://indiehoy.com/wp-content/uploads/2018/05/avengers-inifity-war.jpg"
+              image={`https://image.tmdb.org/t/p/w500${posterPath}`}
               style={{ height: '200px' }}
             />
           </Grid>
           <Grid item xs={7}>
             <CardContent>
               <Typography variant="h5" gutterBottom>
-                Avengers Endgame
+                {originalTitle}
               </Typography>
               <Typography variant="body2" gutterBottom>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi aperiam architecto asperiores facere
-                fugit, mollitia.
+                {overview}
               </Typography>
               <Box>
-                <Rating value={5} readOnly precision={0.5} />
+                <Rating value={popularity} readOnly precision={0.5} />
               </Box>
             </CardContent>
           </Grid>
