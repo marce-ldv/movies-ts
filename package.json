@@ -9,6 +9,7 @@
     "@types/node": "12.7.12",
     "@types/react": "16.9.5",
     "@types/react-dom": "16.9.1",
+    "@types/react-redux": "^7.1.4",
     "@typescript-eslint/eslint-plugin": "^2.3.3",
     "@typescript-eslint/eslint-plugin-tslint": "^2.3.0",
     "@typescript-eslint/parser": "^2.3.3",
@@ -24,6 +25,7 @@
     "react-redux": "^7.1.1",
     "react-router": "^5.1.2",
     "react-scripts": "3.2.0",
+    "redux": "^4.0.4",
     "typescript": "3.6.4"
   },
   "scripts": {

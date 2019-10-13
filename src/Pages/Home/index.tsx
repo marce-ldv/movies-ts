@@ -1,11 +1,19 @@
-import React, { FunctionComponent } from 'react';
+import React, { FunctionComponent, useEffect } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
 import { Container, Grid } from '@material-ui/core';
 import { Category } from '../../components/Category';
 import { Movie } from '../../components/Movie';
-import { useGetMovies } from './hooks';
+import { getMovies } from '../../core/actions/movies';
 
 export const Home: FunctionComponent = () => {
-  const movies = useGetMovies();
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    dispatch(getMovies());
+  }, []);
+
+  const movies = useSelector((state: any) => state.movies);
+  console.log(movies);
 
   return (
     <Container fixed>
