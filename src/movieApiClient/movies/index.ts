@@ -3,9 +3,9 @@ import { Genre } from '../core';
 export interface Movies {
   adult: boolean;
   id: number;
-  imdbId: string | null;
-  originalLanguage: string;
-  originalTitle: string;
+  imdb_id: string | null;
+  original_language: string;
+  original_title: string;
   overview: string | null;
   popularity: number;
   title: string;
