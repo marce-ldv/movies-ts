@@ -4,7 +4,7 @@ import { Container, Grid } from '@material-ui/core';
 import { Category } from '../../components/Category';
 import { Movie } from '../../components/Movie';
 import { getMovies } from '../../core/store/actions/movies';
-import { StoreAll } from '../../core/store/types';
+import { StoreAll } from '../../core/store/store';
 import { MoviesNowPlaying } from '../../core/services/movieApiClient/lib/movies';
 
 export const Home: FunctionComponent = () => {

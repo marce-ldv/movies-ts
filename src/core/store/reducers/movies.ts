@@ -1,9 +1,13 @@
-import { GET_MOVIES } from '../types2';
-import { MovieState } from '../types';
+import { GET_MOVIES } from '../types';
+import { MoviesNowPlaying } from '../../services/movieApiClient/lib/movies';
 
 const initialState = {
   movies: [],
 };
+
+export interface MovieState {
+  movies: MoviesNowPlaying[];
+}
 
 export const moviesReducer = (state: MovieState = initialState, action: { type: any; payload: any }) => {
   switch (action.type) {

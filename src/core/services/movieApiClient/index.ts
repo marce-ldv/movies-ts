@@ -1,7 +1,7 @@
 import axios, { AxiosResponse } from 'axios';
 
 const instance = axios.create({
-  baseURL: `https://api.themoviedb.org/3/${process.env.API_KEY}`,
+  baseURL: `https://api.themoviedb.org/3`,
   method: 'get',
 });
 
@@ -22,6 +22,9 @@ export type trendingParams = {
 
 export const movieDbService = {
   trending<T>({ mediaTypes, timeWindows }: trendingParams) {
-    return movieDbServiceBase<T>(`/trending/${mediaTypes}/${timeWindows}`);
+    return movieDbServiceBase<T>(`/trending/${mediaTypes}/${timeWindows}?api_key=${process.env.REACT_APP_API_KEY}`);
+  },
+  nowPlaying<T>() {
+    return movieDbServiceBase<T>(`/movie/now_playing?api_key=${process.env.REACT_APP_API_KEY}`);
   },
 };

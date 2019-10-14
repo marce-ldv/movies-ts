@@ -1,9 +1,10 @@
-import { GET_MOVIES } from '../types2';
-import { getMovies as getMoviesService } from '../../services/movies';
+import { GET_MOVIES } from '../types';
+import { movieDbService } from '../../services/movieApiClient';
 import { MoviesNowPlayingResults } from '../../services/movieApiClient/lib/movies';
 
 export const getMovies = () => (dispatch: any) => {
-  getMoviesService<MoviesNowPlayingResults>()
+  movieDbService
+    .nowPlaying<MoviesNowPlayingResults>()
     .then(r => {
       dispatch({
         type: GET_MOVIES,
