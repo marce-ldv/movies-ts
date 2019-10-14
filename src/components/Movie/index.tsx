@@ -7,27 +7,15 @@ interface Props {
   originalTitle: string;
   posterPath: string;
   overview: string;
-  releaseDate: string;
-  voteAverage: number;
 }
 
-export const Movie: React.FunctionComponent<Props> = ({
-  popularity,
-  originalTitle,
-  posterPath,
-  overview,
-  releaseDate,
-  voteAverage,
-}) => {
+export const Movie: React.FunctionComponent<Props> = ({ popularity, originalTitle, posterPath, overview }) => {
   return (
     <Card style={{ marginBottom: '1em' }}>
       <CardActionArea>
         <Grid container>
           <Grid item xs={5}>
-            <CardMedia
-              image={`https://image.tmdb.org/t/p/w500${posterPath}`}
-              style={{ height: '200px' }}
-            />
+            <CardMedia image={`https://image.tmdb.org/t/p/w500${posterPath}`} style={{ height: '200px' }} />
           </Grid>
           <Grid item xs={7}>
             <CardContent>

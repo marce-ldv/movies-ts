@@ -3,7 +3,9 @@ import { useDispatch, useSelector } from 'react-redux';
 import { Container, Grid } from '@material-ui/core';
 import { Category } from '../../components/Category';
 import { Movie } from '../../components/Movie';
-import { getMovies } from '../../core/actions/movies';
+import { getMovies } from '../../core/store/actions/movies';
+import { StoreAll } from '../../core/store/types';
+import { MoviesNowPlaying } from '../../core/services/movieApiClient/lib/movies';
 
 export const Home: FunctionComponent = () => {
   const dispatch = useDispatch();
@@ -12,7 +14,7 @@ export const Home: FunctionComponent = () => {
     dispatch(getMovies());
   }, []);
 
-  const movies = useSelector((state: any) => state.movies);
+  const movies = useSelector<StoreAll, MoviesNowPlaying[]>(({ moviesReducer }) => moviesReducer.movies);
   console.log(movies);
 
   return (
@@ -23,15 +25,13 @@ export const Home: FunctionComponent = () => {
         </Grid>
 
         <Grid item xs={8}>
-          {movies.map((v: any, i: number) => (
+          {movies.map((v, i) => (
             <Movie
               key={i}
               popularity={v.popularity}
               originalTitle={v.original_title}
-              posterPath={v.poster_path}
+              posterPath={v.poster_path ? v.poster_path : ''}
               overview={v.overview}
-              releaseDate={v.release_date}
-              voteAverage={v.vote_average}
             />
           ))}
         </Grid>

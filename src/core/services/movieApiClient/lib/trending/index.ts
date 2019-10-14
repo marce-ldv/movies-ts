@@ -1,3 +1,3 @@
 import { PagedResult } from '../core';
 
-export type Trending = {} & PagedResult;
+// export type Trending = {} & PagedResult;

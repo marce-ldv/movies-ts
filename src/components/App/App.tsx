@@ -1,9 +1,9 @@
 import React from 'react';
 import { Navbar } from '../Navbar';
-import { Home } from '../../pages/Home';
 import { Container } from '@material-ui/core';
 import { Provider } from 'react-redux';
-import store from '../../core/store';
+import store from '../../core/store/store';
+import { Home } from '../../pages/Home2';
 
 const App: React.FC = () => {
   return (

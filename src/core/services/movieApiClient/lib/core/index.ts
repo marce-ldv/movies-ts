@@ -1,3 +1,8 @@
+export type Dates = {
+  maximum: string;
+  minimum: string;
+};
+
 export interface Genre {
   id: number;
   name: string;
@@ -12,9 +17,9 @@ export interface MovieResult {
   title: string;
 }
 
-export interface PagedResult {
+export interface PagedResult<T> {
   page: number;
   total_pages: number;
   total_results: number;
-  results: MovieResult[];
+  results: T[];
 }
