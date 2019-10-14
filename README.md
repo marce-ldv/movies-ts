@@ -1,34 +1,36 @@
 # Movies TS
 
-###An application for watch featured movies and their details, e.g: date release, authors, overviews, adv. 
+### An application for watch featured movies and their details, e.g: date release, authors, overviews, adv. 
 
-##Built with React and Typescript
+## Built with React and Typescript
 
-##Requirements
+## Requirements
 
-###Git
+### Git
 https://git-scm.com/downloads
-###Node JS
+### Node JS
 https://nodejs.org/en/download/
-###Yarn or NPM
+### Yarn or NPM
 https://yarnpkg.com/en/docs/install
 
-##How to submit
+## How to submit
 
-###1) Clone this proyect with git clone
+
+
+* Clone this proyect with git clone
 ```
 git clone https://github.com/marcelo-docutec/movies-ts
 ```
-
-
-###2) Run these commands
+* Run these commands
 ```
 yarn install
 yarn start
 ```
-###Enjoy !!
+### Enjoy !!!
 
-##Technologies used:
+---
+
+### Technologies used:
 
 ```material-ui
 redux
@@ -45,8 +47,8 @@ prettier
 typescript
 ```
 
-#####For more technologies you can see the package.json in the source module
+##### For more technologies you can see the package.json in the source module
 
-##Developers:
-####Marcelo Ludovino
-####Sergio Molina
+## Developers information
+* Marcelo Ludovino
+* Sergio Molina
