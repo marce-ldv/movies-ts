@@ -16,14 +16,36 @@ https://yarnpkg.com/en/docs/install
 ##How to submit
 
 ###1) Clone this proyect with git clone
+```
 git clone https://github.com/marcelo-docutec/movies-ts
+```
+
 
 ###2) Run these commands
-
-#### yarn install
-#### yarn start
-
+```
+yarn install
+yarn start
+```
 ###Enjoy !!
+
+##Technologies used:
+
+```material-ui
+redux
+react-redux
+redux-thunk
+jest
+enzyme
+eslint/tslint
+node-sass
+prettier
+react-router
+axios
+prettier
+typescript
+```
+
+#####For more technologies you can see the package.json in the source module
 
 ##Developers:
 ####Marcelo Ludovino
