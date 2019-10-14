@@ -15,7 +15,6 @@ export const Home: FunctionComponent = () => {
   }, []);
 
   const movies = useSelector<StoreAll, MoviesNowPlaying[]>(({ moviesReducer }) => moviesReducer.movies);
-  console.log(movies);
 
   return (
     <Container fixed>
