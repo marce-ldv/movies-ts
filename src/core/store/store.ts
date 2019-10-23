@@ -1,4 +1,4 @@
-import { MovieState } from './reducers/movies';
+import { MovieState } from './movies/reducer';
 
 export interface StoreAll {
   moviesReducer: MovieState;

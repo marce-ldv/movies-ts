@@ -1,4 +1,4 @@
-import { GET_MOVIES } from '../types';
+import { MoviesAction } from './types';
 import { MoviesNowPlaying } from '../../services/movieApiClient/lib/movies';
 
 const initialState = {
@@ -9,10 +9,10 @@ export interface MovieState {
   movies: MoviesNowPlaying[];
 }
 
-export const moviesReducer = (state: MovieState = initialState, action: { type: any; payload: any }) => {
+export const moviesReducer = (state: MovieState = initialState, action: MoviesAction): MovieState => {
   switch (action.type) {
-    case GET_MOVIES:
-      return { movies: action.payload };
+    case 'SET_MOVIES_RESULT':
+      return { movies: action.payload.results };
 
     default:
       return state;
