@@ -1,9 +1,9 @@
 import { Dispatch } from 'redux';
-import { setMoviesAC, emptyMovieAC } from './types';
+import { setMoviesAC, emptyMovieAC, MoviesAction } from './types';
 import { movieDbService } from '../../services/movieApiClient';
 import { MoviesNowPlayingResults } from '../../services/movieApiClient/lib/movies';
 
-export const setMovies = () => (dispatch: Dispatch): void => {
+export const setMovies = () => (dispatch: Dispatch<MoviesAction>): void => {
   movieDbService
     .nowPlaying<MoviesNowPlayingResults>()
     .then(({ data: movies }) => {

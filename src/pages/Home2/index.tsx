@@ -3,15 +3,15 @@ import { useDispatch, useSelector } from 'react-redux';
 import { Container, Grid } from '@material-ui/core';
 import { Category } from '../../components/Category';
 import { Movie } from '../../components/Movie';
-import { getMovies } from '../../core/store/actions/movies';
 import { StoreAll } from '../../core/store/store';
+import { actions } from '../../core/store/movies';
 import { MoviesNowPlaying } from '../../core/services/movieApiClient/lib/movies';
 
 export const Home: FunctionComponent = () => {
   const dispatch = useDispatch();
 
   useEffect(() => {
-    dispatch(getMovies());
+    dispatch(actions.setMovies());
   }, []);
 
   const movies = useSelector<StoreAll, MoviesNowPlaying[]>(({ moviesReducer }) => moviesReducer.movies);
